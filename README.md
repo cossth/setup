@@ -1,3 +1,4 @@
 # setup-device
-enter this command 
-`curl -s https://setup.cossth.com/ | sudo bash`
+enter this command
+
+`curl -L -s https://setup.cossth.com/ | sudo bash`
