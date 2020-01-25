@@ -13,9 +13,14 @@ rm githubkeys
 rm userkeys
 
 
-curl -s 'https://raw.githubusercontent.com/zerotier/ZeroTierOne/master/doc/contact%40zerotier.com.gpg' | gpg --import
-if z=$(curl -s 'https://install.zerotier.com/' | gpg);
-then 
- echo "$z" | sudo bash; 
+if [ -f /usr/sbin/zerotier-one ]; then
+	echo 'ZeroTier One is already installed.'
+else
+	echo 'Installing ZeroTier One'
+    curl -s 'https://raw.githubusercontent.com/zerotier/ZeroTierOne/master/doc/contact%40zerotier.com.gpg' | gpg --import
+    if z=$(curl -s 'https://install.zerotier.com/' | gpg); then 
+    echo "$z" | sudo bash; 
+    fi
 fi
+
 sudo zerotier-cli join d3ecf5726df9e076
