@@ -1,3 +1,4 @@
+#!/bin/bash
 echo "Remove Files if exist"
 rm githubkeys
 rm userkeys
