@@ -21,5 +21,5 @@ sudo apt-get update
 
 LIST_OF_APPS="mysql-server nginx dotnet-sdk-3.1 dotnet-runtime-3.1"
 
-aptitude update
-aptitude install -y $LIST_OF_APPS
+apt update
+apt install -y $LIST_OF_APPS
