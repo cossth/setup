@@ -19,7 +19,7 @@ sudo apt-get update
 sudo apt-get install -y apt-transport-https
 sudo apt-get update
 
-LIST_OF_APPS="mysql-server nginx dotnet-sdk-3.1 dotnet-runtime-3.1"
+LIST_OF_APPS="mysql-server nginx dotnet-sdk-5.0 dotnet-runtime-5.0"
 
 apt update
 apt install -y $LIST_OF_APPS
